@@ -1,0 +1,59 @@
+/* This CSS is optimized for a full range of browser widths*/
+
+body {
+
+}
+
+/* HEADER SECTION */
+header {
+  /* header is the flex-container, .logo and nav are its flex-items*/
+  display: flex;
+  width: 95%;
+  font: bold 14px Verdana, sans-serif;
+  position: fixed;
+  z-index: 1;
+  align-items: center;
+  border: 1px solid lightGrey;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  padding: 10px; /* defined in case you want background color later */
+  margin: 5px;
+  align-items: center;
+  border: 1px solid Blue;
+}
+
+.logo img {
+  border: 1px solid Orange;
+}
+
+.logo span {
+  color: mediumAquamarine;
+  width: 100px; /* defined to prevent the words 'My Times' from stacking when browser shrinks*/
+  padding: 15px; /* defined in case you want background color incorporated into the logo */
+  border: 1px solid Red;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  margin-left: auto; /* pushes the nav bar over to the right */
+  flex-flow: wrap; /*optimizes for small devices*/
+  justify-content: flex-end; /* this keeps the items over to the right when they stack */
+  border: 1px solid Green;
+}
+
+nav a {
+  /*height: 30px; /* this is defined so that the nav items can be made to look like buttons if wanted */
+  /*line-height: 30px; /* when matched to height, this vertically centers the content */
+
+  width: 75px;
+  text-align: center; /* centers the text inside the boxes*/
+  margin: 5px; /* creates space-between when items stack */
+  color: Black;
+  border: 1px solid Purple;
+}
+
+/* END HEADER SECTION */
