@@ -1,19 +1,21 @@
 /* This CSS is optimized for a full range of browser widths*/
 
 body {
-
+  display: flex;
 }
 
 /* HEADER SECTION */
 header {
   /* header is the flex-container, .logo and nav are its flex-items*/
   display: flex;
-  width: 95%;
+  width: 98%;
   font: bold 14px Verdana, sans-serif;
   position: fixed;
-  z-index: 1;
   align-items: center;
-  border: 1px solid lightGrey;
+  border-bottom: 1px solid Grey;
+  background-color: White;
+  flex: 1 1 auto;
+
 }
 
 /* LOGO */
@@ -23,6 +25,7 @@ header {
   margin: 5px;
   align-items: center;
   border: 1px solid Blue;
+
 }
 
 .logo img {
@@ -46,14 +49,103 @@ nav {
 }
 
 nav a {
-  /*height: 30px; /* this is defined so that the nav items can be made to look like buttons if wanted */
-  /*line-height: 30px; /* when matched to height, this vertically centers the content */
-
+  height: 30px; /* this is defined so that the nav items can be made to look like buttons if wanted */
+  line-height: 30px; /* when matched to height, this vertically centers the content */
   width: 75px;
-  text-align: center; /* centers the text inside the boxes*/
+  text-align: center; /* centers the text left-to-right inside the boxes*/
   margin: 5px; /* creates space-between when items stack */
   color: Black;
   border: 1px solid Purple;
 }
 
 /* END HEADER SECTION */
+
+/* START MAIN CONTAINER */
+
+main {
+  display: flex;
+  border: 1px solid Grey;
+  width: 98%;
+  flex-flow: row wrap;
+  flex: 1 1 auto;
+}
+
+section {
+  min-width: 280px;
+  min-height: 280px;
+}
+
+h1 {
+  flex: 1 1 290px;
+}
+
+h2 {
+  flex: 1 1 290px;
+  padding-left: 4px;
+}
+
+p {
+  flex: 1 1 290px;
+  padding-left: 4px;
+  border: 1px solid red;
+}
+
+/* COLUMN LARGE: */
+
+.column_large {
+/* this box: */
+  width: 600px;
+  margin: 2px;
+  border: 1px solid Red;
+/* this box's contents: */
+  background-color: lightGrey;
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+.top_image {
+  display: flex;
+  background-image: url("../images/wine_table.png");
+  width: auto;
+  height: 300px;
+  margin: 5px;
+  font-size: 30px;
+  color: White;
+  align-items: center;
+  padding-left: 10px;
+}
+
+
+
+.middle_image {
+  background-image: url("../images/fall_season.png");
+}
+
+.bottom_image {
+  background-image: url("../images/hipster_cameraman.png");
+}
+
+/* COLUMN MEDIUM: */
+.column_medium {
+  display: flex;
+  flex-flow: row wrap;
+  width: 300px;
+  height: 1000px;
+  margin: 2px;
+  border: 1px solid Green;
+  background-color: lightGrey;
+
+}
+
+
+/* COLUMN SMALL: */
+.column_small {
+  display: inline-flex;
+  flex-direction: column;
+  width: 300px;
+  height: 1000px;
+  margin: 2px;
+  border: 1px solid Blue;
+  background-color: lightGrey;
+}
