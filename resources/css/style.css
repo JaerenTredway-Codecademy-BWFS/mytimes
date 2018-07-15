@@ -1,12 +1,11 @@
-/* This CSS is optimized for a full range of browser widths*/
 
 body {
-  display: flex;
+  border: 2px solid Grey;
+  width: 98%;
 }
 
 /* HEADER SECTION */
 header {
-  /* header is the flex-container, .logo and nav are its flex-items*/
   display: flex;
   width: 98%;
   font: bold 14px Verdana, sans-serif;
@@ -15,137 +14,158 @@ header {
   border-bottom: 1px solid Grey;
   background-color: White;
   flex: 1 1 auto;
-
 }
 
-/* LOGO */
 .logo {
   display: flex;
   padding: 10px; /* defined in case you want background color later */
-  margin: 5px;
   align-items: center;
-  border: 1px solid Blue;
-
-}
-
-.logo img {
-  border: 1px solid Orange;
 }
 
 .logo span {
   color: mediumAquamarine;
   width: 100px; /* defined to prevent the words 'My Times' from stacking when browser shrinks*/
   padding: 15px; /* defined in case you want background color incorporated into the logo */
-  border: 1px solid Red;
 }
 
-/* NAV */
-nav {
+header nav {
   display: flex;
   margin-left: auto; /* pushes the nav bar over to the right */
   flex-flow: wrap; /*optimizes for small devices*/
-  justify-content: flex-end; /* this keeps the items over to the right when they stack */
-  border: 1px solid Green;
 }
 
-nav a {
+header nav a {
   height: 30px; /* this is defined so that the nav items can be made to look like buttons if wanted */
   line-height: 30px; /* when matched to height, this vertically centers the content */
   width: 75px;
   text-align: center; /* centers the text left-to-right inside the boxes*/
   margin: 5px; /* creates space-between when items stack */
   color: Black;
-  border: 1px solid Purple;
 }
+/*END OF HEADER SECTION */
 
-/* END HEADER SECTION */
 
-/* START MAIN CONTAINER */
-
-main {
-  display: flex;
-  border: 1px solid Grey;
-  width: 98%;
-  flex-flow: row wrap;
-  flex: 1 1 auto;
-}
-
-section {
-  min-width: 280px;
-  min-height: 280px;
+/* NOT REALLY UNIVERSAL STYLES */
+p, h1, h2, h3 {
+  display: block;
+  width: auto;
+  font-family: Georgia, serif;
 }
 
 h1 {
-  flex: 1 1 290px;
+  font-size: 40px;
+  color: White;
 }
 
-h2 {
-  flex: 1 1 290px;
-  padding-left: 4px;
+.standard_box a {
+  display: block;
+  padding: 11px 20px;
+  border-bottom: 1px solid black;
+  background-color: WhiteSmoke;
+  font-family: Verdana;
+  font-size: 12px;
+  color: DimGray;
+  min-width: 295px;
 }
 
-p {
-  flex: 1 1 290px;
-  padding-left: 4px;
-  border: 1px solid red;
-}
+/*Note: Main Container contains columns, which contain boxes, which contain content. */
 
-/* COLUMN LARGE: */
-
-.column_large {
-/* this box: */
-  width: 600px;
-  margin: 2px;
-  border: 1px solid Red;
-/* this box's contents: */
-  background-color: lightGrey;
+/*MAIN CONTAINER*/
+main {
   display: flex;
+  flex-flow: row wrap;
+  width: 98%;
+
+}
+
+/*COLUMN CONTAINERS*/
+.wide_column {
+  display: flex;
+  max-width: 600px;
   flex-flow: row wrap;
 
 }
 
-.top_image {
+.standard_column {
   display: flex;
-  background-image: url("../images/wine_table.png");
-  width: auto;
-  height: 300px;
-  margin: 5px;
-  font-size: 30px;
-  color: White;
-  align-items: center;
-  padding-left: 10px;
+  max-width: 300px;
+  flex-flow: row wrap;
+
 }
 
+/*BOX CONTAINERS*/
+.double_wide_box {
+  display: flex;
+  max-width: 590px;
+  min-width: 590px;
+  height: 300px;
+  flex-wrap: wrap;
+}
 
+.standard_box {
+  display: flex;
+  max-width: 300px;
+  min-width: 300px;
+  height: 300px;
+  flex-wrap: wrap;
 
-.middle_image {
+}
+
+/*BACKGROUND IMAGES*/
+
+#background_image_1 {
+  background-image: url("../images/wine_table.png");
+}
+
+#background_image_2 {
   background-image: url("../images/fall_season.png");
 }
 
-.bottom_image {
+#background_image_3 {
   background-image: url("../images/hipster_cameraman.png");
 }
 
-/* COLUMN MEDIUM: */
-.column_medium {
+#background_image_4 {
+  background-image: url("../images/white_cat.png");
+}
+
+#background_image_5 {
+  background-image: url("../images/cookie.png");
+}
+
+/* FOOTER: */
+footer {
   display: flex;
-  flex-flow: row wrap;
-  width: 300px;
-  height: 1000px;
-  margin: 2px;
-  border: 1px solid Green;
-  background-color: lightGrey;
+  width: 98%;
+  height: 300px;
+  font: 14px Verdana, sans-serif;
+  position: relative;
+  top: auto;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid Grey;
+  background-color: mediumAquamarine;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+footer nav {
+  display: inline-block;
+  width: 800px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
 
 }
 
+footer span {
+  color: White;
+  border-right: 2px solid White;
+  padding: 10px;
+}
 
-/* COLUMN SMALL: */
-.column_small {
-  display: inline-flex;
-  flex-direction: column;
-  width: 300px;
-  height: 1000px;
-  margin: 2px;
-  border: 1px solid Blue;
-  background-color: lightGrey;
+footer a {
+  color: Black;
+  margin: 5px;
+  font-family: Verdana, sans-serif;
 }
